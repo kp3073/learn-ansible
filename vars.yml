@@ -17,6 +17,8 @@
     - name: Task lavel 
       ansible.builtin.debug:
         msg:  "{{ url }}"
+      vars:
+        url: task.example.com
 
     - name: Play level 
       ansible.builtin.debug:
