@@ -12,8 +12,12 @@
 - name: Deamo on printing
   hosts: localhost
   vars: 
-    url: example.com
+    url: play.example.com
   tasks:
-    - name: Print hello world
+    - name: Task lavel 
       ansible.builtin.debug:
         msg:  "{{ url }}"
+
+    - name: Play level 
+      ansible.builtin.debug:
+        msg: "{{ url }}"
