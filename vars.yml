@@ -16,4 +16,4 @@
   tasks:
     - name: Print hello world
       ansible.builtin.debug:
-        msg:  "{{$url}}"
+        msg:  "{{ url }}"
