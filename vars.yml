@@ -1,0 +1,6 @@
+- name: Deamo on printing
+  hosts: localhost
+  tasks:
+    - name: Print hello world
+      ansible.builtin.debug:
+      msg: hello worlddd1223
