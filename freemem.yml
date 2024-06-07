@@ -1,5 +1,5 @@
 - name: Calculate free mem
-  hosts: all
+  hosts: localhost
   tasks: 
     - name: Calculate free memory
       ansible.builtin.shell: free | grep mem
