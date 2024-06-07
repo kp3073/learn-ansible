@@ -5,9 +5,9 @@
       ansible.builtin.shell: free | grep -i mem
       register: free
 
-    - name: Output the variable value
-      ansible.builtin.debug:
-        msg: "{{ free.stdout }}"
+    # - name: Output the variable value
+    #   ansible.builtin.debug:
+    #     msg: "{{ free.stdout }}"
 
     - name: set a fact
       ansible.builtin.set_fact:
@@ -18,6 +18,6 @@
         total: "{{ FREE[1] }}"
         free: "{{ FREE[3] }}"
 
-    # - name: print free Output
-    #   ansible.builtin.debug:
-    #     msg: "{{ free|int / total|int * 100 }}"
+    - name: print free Output
+      ansible.builtin.debug:
+        msg: "{{ free|int / total|int * 100 }}"
