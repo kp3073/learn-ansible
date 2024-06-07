@@ -1,0 +1,28 @@
+- name: Practice playbook
+  hosts: webservers
+  become: yes
+  tasks: 
+    - name: ping all hosts
+      ansible.builtin.ping:
+    - name: Install htop
+      ansible.builtin.dnf:
+        name: htop
+        state: present
+      when: ansible_os_family == "centos"
+    - name: Install and start nginx
+      ansible.builtin.dnf:
+        name: nginx
+        state: present
+        enabled: true
+    - name: create a file with some contentinit
+      ansible.builtin.copy:
+        dest: /tmp/teset.txt
+        content: | 
+          This is test file created by ansible
+          and its fun 
+    - name: display content of file
+      ansible.builtin.command:
+        argv:
+          - cat 
+          - /tmp/teset.txt
+      register: cat_output 
