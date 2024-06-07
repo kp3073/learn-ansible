@@ -24,7 +24,7 @@
       ansible.builtin.debug:
         msg: "{{ url }}"
 
-    - name: role variable
-
-      roles:
-        - demo
+- name: role variable
+  hosts: localhost
+  roles:
+    - demo
