@@ -16,7 +16,7 @@
     - name: Damo
       ansible.builtin.set_fact:
         total: "{{ FREE[1] }}"
-        free: "{{ FREE[2] }}"
+        free: "{{ FREE[3] }}"
 
     - name: print free Output
       ansible.builtin.debug:
