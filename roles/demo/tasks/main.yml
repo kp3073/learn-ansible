@@ -1,3 +1,3 @@
-- name: Roles lavel variable
+- name: roles level variable
   ansible.builtin.debug:
     msg: "{{ url }}"
