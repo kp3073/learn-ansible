@@ -9,11 +9,7 @@
         name: htop
         state: present
       when: ansible_os_family == "centos"
-    - name: Install and start nginx
-      ansible.builtin.dnf:
-        name: nginx
-        state: present
-        enabled: true
+
     - name: create a file with some contentinit
       ansible.builtin.copy:
         dest: /tmp/teset.txt
