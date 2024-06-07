@@ -1,5 +1,5 @@
 - name: Practice playbook
-  hosts: webservers
+  hosts: 172.31.29.23
   become: yes
   tasks: 
     - name: ping all hosts
