@@ -25,6 +25,6 @@
         msg: "{{ url }}"
 
     - name: role variable
-      hosts: localhost
+
       roles:
         - demo
