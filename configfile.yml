@@ -1,0 +1,5 @@
+- name: Damo on config file
+  hosts: all
+  become: yes
+  roles:
+    - demo
