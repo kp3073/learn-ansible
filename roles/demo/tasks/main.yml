@@ -1,7 +1,3 @@
-- name: roles level variable
-  ansible.builtin.debug:
-    msg: "{{ url }}"
-
 - name: Copy file
   ansible.builtin.template:
     src: file.txt
