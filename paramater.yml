@@ -1,0 +1,6 @@
+- name: Ansible Paramater
+  hosts: localhost
+  tasks:
+    - name: Get Aws Paramater using ansible
+      ansible.builtin.debug:
+        msg: "{{ lookup('amazon.aws.aws_ssm', 'test', region='us-east-1' ) }}"
