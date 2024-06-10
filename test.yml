@@ -1,0 +1,9 @@
+- hosts: localhost
+  become: yes
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  tasks:
+    - name: Check if boto3 is installed
+      command: python3 -c "import boto3"
+    - name: Check if botocore is installed
+      command: python3 -c "import botocore"
