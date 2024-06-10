@@ -6,7 +6,9 @@
     - name: Get Aws Paramater using ansible
       ansible.builtin.debug:
         msg: "{{ lookup('aws_ssm', 'test',region='us-east-1') }}"
+
     - name: Check if boto3 is installed
       command: python3 -c "import boto3"
+
     - name: Check if botocore is installed
       command: python3 -c "import botocore"
